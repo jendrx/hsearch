@@ -24,6 +24,7 @@ class UsersFixture extends TestFixture
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'users_username_key' => ['type' => 'unique', 'columns' => ['username'], 'length' => []],
+            'users_uq_email' => ['type' => 'unique', 'columns' => ['email'], 'length' => []],
         ],
     ];
     // @codingStandardsIgnoreEnd

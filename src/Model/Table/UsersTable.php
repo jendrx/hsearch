@@ -1,7 +1,6 @@
 <?php
 namespace App\Model\Table;
 
-use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
@@ -57,7 +56,6 @@ class UsersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('username')
             ->requirePresence('username', 'create')
             ->notEmpty('username')
             ->add('username', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
@@ -68,7 +66,8 @@ class UsersTable extends Table
 
         $validator
             ->email('email')
-            ->allowEmpty('email');
+            ->allowEmpty('email')
+            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;
     }

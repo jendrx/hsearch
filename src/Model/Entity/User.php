@@ -11,8 +11,8 @@ use Cake\ORM\Entity;
  * @property string $password
  * @property string $email
  *
- * @property \App\Model\Entity\Buyer[] $buyers
- * @property \App\Model\Entity\Seller[] $sellers
+ * @property \App\Model\Entity\Buyer $buyer
+ * @property \App\Model\Entity\Seller $seller
  */
 class User extends Entity
 {
@@ -30,8 +30,8 @@ class User extends Entity
         'username' => true,
         'password' => true,
         'email' => true,
-        'buyers' => true,
-        'sellers' => true
+        'buyer' => true,
+        'seller' => true
     ];
 
     /**
