@@ -7,8 +7,8 @@ use Cake\ORM\Entity;
  * Buyer Entity
  *
  * @property int $id
- * @property string $fname
  * @property string $lname
+ * @property string $fname
  * @property \Cake\I18n\FrozenDate $birthdate
  * @property int $user_id
  *
@@ -27,8 +27,8 @@ class Buyer extends Entity
      * @var array
      */
     protected $_accessible = [
-        'fname' => true,
         'lname' => true,
+        'fname' => true,
         'birthdate' => true,
         'user_id' => true,
         'user' => true

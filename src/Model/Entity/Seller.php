@@ -8,8 +8,6 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $user_id
- *
- * @property \App\Model\Entity\User $user
  */
 class Seller extends Entity
 {
